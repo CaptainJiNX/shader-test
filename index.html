@@ -22,11 +22,8 @@
 		scene.add(camera);
 
 		var uniforms = {
-			time: { type:"f", value: 0 },
-			tex0: { type:"t", value: THREE.ImageUtils.loadTexture("img/concrete1.jpg") }
+			time: { type:"f", value: 0 }
 		};
-
-		uniforms.tex0.value.wrapS = uniforms.tex0.value.wrapT = THREE.Repeat;
 
 		var loadShaders = function (callback) {
 			var loadShader = function (shader, next) {
@@ -66,21 +63,6 @@
 
 		    geometry.faces.push( new THREE.Face3(0, 1, 2));
 		    geometry.faces.push( new THREE.Face3(3, 0, 2));
-
-			var s = width / 512.0;
-			var t = height / 512.0;
-
-			geometry.faceVertexUvs[0].push([
-			  new THREE.Vector2(0,t),
-			  new THREE.Vector2(s,t),
-			  new THREE.Vector2(s,0)
-			]);
-
-			geometry.faceVertexUvs[0].push([
-			  new THREE.Vector2(0,0),
-			  new THREE.Vector2(0,t),
-			  new THREE.Vector2(s,0)
-			]);
 
 			return geometry;
 		};
