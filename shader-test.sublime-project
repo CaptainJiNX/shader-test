@@ -1,0 +1,13 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"shader-test.sublime-project"
+			],
+			"follow_symlinks": true,
+			"path": "."
+		}
+	]
+}
